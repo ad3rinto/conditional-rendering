@@ -1,20 +1,20 @@
 import React from "react";
 import Login from "./Login";
 
-let isLoggedIn = false;
+let isLoggedIn = true;
 
-function renderConditionally(){
-  if (isLoggedIn === true){
-    return<h1>Hello There</h1>
-  } else {
-    return <Login />
-  }
-};
+// function renderConditionally(){
+//   if (isLoggedIn === true){
+//     return<h1>Hello There</h1>
+//   } else {
+//     return <Login />
+//   }
+// };
 
 function App() {
   return (
     <div className="container">
-      {renderConditionally()}
+     {isLoggedIn ? <h1>Hello</h1> :<Login />}
     </div>
   );
 }
